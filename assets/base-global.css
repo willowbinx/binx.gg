@@ -1,0 +1,148 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #ffa4f2;
+    --secondary: #000;
+    --bg-light: #a5a5a5;
+    --bg-med: #979797;
+    --bg-dark: #292c34;
+    --border-regular: 1px solid black;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-dark);
+}
+
+h3, h4 {
+    line-height: 0%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--primary);
+}
+
+.header-logo {
+    width: 75px;
+    height: 75px;
+}
+
+.header-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px 20px 0px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 0px 5px 2px 0px;
+    display: inline-block;
+    position: relative; 
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    background: var(--primary);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out; 
+}
+
+.nav-item:hover {
+    color: var(--primary);
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.header-title {
+    line-height: 0%;
+}
+
+.header-title {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link-card {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 15px 15px 50px;
+    border: 3px solid var(--primary);
+    box-shadow: 0px 0px 22px -3px var(--secondary);
+    background-color: var(--bg-light);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+/* Tablet and small device card width */
+@media screen and (min-width: 701px) and (max-width: 999px) {
+    .link-card {
+        width: 75%;
+    }
+}
+
+/* Mobile card width */
+@media screen and (max-width: 700px) {
+    main {
+        padding: 30px;
+    }
+
+    .link-card {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+.link-card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 22px -3px var(--primary);
+    transition: 0.3s;
+}
+
+.link-card-link {
+    color: black;
+}
+
+.card-icon {
+    width: 75px;
+    height: 75px;
+}
